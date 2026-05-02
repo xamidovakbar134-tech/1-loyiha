@@ -6,7 +6,7 @@ const Header = () => {
             <div className="flex justify-center items-center gap-4">
                 <p className="mt-2 text-blue-400">Home</p>
                 <p className="mt-2 text-blue-400">Jobs</p>
-                <button className="btn btn-dark">Post a Job</button>
+                <button className="btn btn-primary">Post a Job</button>
             </div>
         </div>
     </div>
