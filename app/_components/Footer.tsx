@@ -2,7 +2,6 @@ const Footer = () => {
   return (
     <footer className="w-full bg-[#030712] text-gray-300! py-12 px-6 md:px-16!  border-t! border-gray-800!">
       <div className="max-w-7xl! mx-auto! grid grid-cols-1 md:grid-cols-3! gap-12 text-left">
-        {/* About JobPortal ustuni */}
         <div className="flex flex-col gap-4">
           <h3 className="text-xl font-bold! text-white tracking-tight!">
             About JobPortal
@@ -12,7 +11,6 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Quick Links ustuni */}
         <div className="flex flex-col gap-4">
           <h3 className="text-xl font-bold! text-white tracking-tight!">
             Quick Links
@@ -53,7 +51,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Mualliflik huquqi qismi */}
       <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-gray-800 text-center">
         <p className="text-sm text-gray-500">
           &copy; {new Date().getFullYear()} JobPortal. All rights reserved.
