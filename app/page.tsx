@@ -1,3 +1,5 @@
+import Banner from "./_components/Banner";
+import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 import Hero from "./_components/Hero";
 import PreFooter from "./_components/PreFooter";
@@ -9,6 +11,8 @@ export default function Home() {
       <Hero/>
       <Section/>
       <PreFooter/>
+      <Banner/>
+      <Footer/>
     </div>
   );
 }
