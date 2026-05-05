@@ -16,7 +16,7 @@ const FeaturesSection = () => {
         
         <div className="p-8 border border-gray-100 rounded-2xl bg-white shadow-sm hover:shadow-md! transition-shadow!">
           <div className="mb-4">
-            <Search className="text-blue-500 w-8 h-8" />
+            <Search className="text-blue-500! w-8 h-8" />
           </div>
           <h3 className="text-xl font-bold text-gray-900 mb-2">Powerful Search</h3>
           <p className="text-gray-500 leading-relaxed">
@@ -26,7 +26,7 @@ const FeaturesSection = () => {
 
         <div className="p-8 border border-gray-100 rounded-2xl bg-white shadow-sm hover:shadow-md! transition-shadow!">
           <div className="mb-4">
-            <Star className="text-yellow-400 w-8 h-8 fill-yellow-400" />
+            <Star className="text-yellow-400! w-8 h-8 fill-yellow-400!" />
           </div>
           <h3 className="text-xl font-bold text-gray-900 mb-2">Curated Opportunities</h3>
           <p className="text-gray-500 leading-relaxed">
