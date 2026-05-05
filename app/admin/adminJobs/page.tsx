@@ -52,7 +52,6 @@ const JobsManagement = () => {
 
   return (
     <div className="p-10">
-      {/* Sarlavha qismi */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900">Jobs Management</h1>
         <p className="text-gray-500 mt-1">Manage all your job postings</p>
@@ -61,7 +60,6 @@ const JobsManagement = () => {
         </button>
       </div>
 
-      {/* Jadval Card */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
         <div className="p-6 border-b border-gray-100">
           <h2 className="text-xl font-bold text-gray-800">

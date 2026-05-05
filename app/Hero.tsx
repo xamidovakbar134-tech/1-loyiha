@@ -25,11 +25,10 @@ const Hero = () => {
               className="w-full outline-none! p-2 text-slate-700! bg-slate-50/50!"
             />
             <Link href="/jobs">
-            <button className="w-full sm:w-auto bg-[#0f3460]! hover:bg-[#1a4a80]! text-white py-2 px-3 font-medium transition-colors">
-              Search
-            </button>
+              <button className="w-full sm:w-auto bg-[#0f3460]! hover:bg-[#1a4a80]! text-white py-2 px-3 font-medium transition-colors">
+                Search
+              </button>
             </Link>
-            
           </div>
         </div>
 
