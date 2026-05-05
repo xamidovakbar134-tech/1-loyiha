@@ -36,7 +36,7 @@ export default function JobDetailsPage() {
   if (!job) return <div className="p-20 text-center text-red-500 font-bold">Job not found!</div>;
 
   return (
-    <div className="bg-[#fcfcfc] min-h-screen p-10 font-sans">
+    <div className="bg-[#fcfcfc]! min-h-screen p-10 font-sans!">
       <div className="max-w-6xl mx-auto">
         
         <Link
