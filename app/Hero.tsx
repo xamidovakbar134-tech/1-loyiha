@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Hero = () => {
   return (
     <section className="bg-white py-16 px-4 font-sans">
@@ -20,35 +22,38 @@ const Hero = () => {
             <input
               type="text"
               placeholder="Search by job title, company, or keyword..."
-              className="w-full outline-none text-slate-700 bg-slate-50/50"
+              className="w-full outline-none! p-2 text-slate-700! bg-slate-50/50!"
             />
-            <button className="w-full sm:w-auto bg-[#0f3460] hover:bg-[#1a4a80] text-white py-2 px-3 font-medium transition-colors">
+            <Link href="/jobs">
+            <button className="w-full sm:w-auto bg-[#0f3460]! hover:bg-[#1a4a80]! text-white py-2 px-3 font-medium transition-colors">
               Search
             </button>
+            </Link>
+            
           </div>
         </div>
 
         <div className="flex flex-wrap justify-center gap-4 mb-16">
-          <button className="bg-[#0f3460] rounded-2 py-2 px-3 text-white rounded-md font-semibold hover:bg-[#1a4a80] transition-all">
+          <button className="bg-[#0f3460]! rounded-2 py-2 px-3 text-white rounded-md font-semibold hover:bg-[#1a4a80]! transition-all">
             Browse All Jobs
           </button>
-          <button className="bg-white text-slate-900 py-2 px-3 rounded-2 border border-slate-200 rounded-md font-semibold hover:bg-slate-50 transition-all">
+          <button className="bg-white text-slate-900! py-2 px-3 rounded-2 border border-slate-200! rounded-md font-semibold hover:bg-slate-50! transition-all!">
             Post a Job
           </button>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-8">
           <div className="flex flex-col items-center">
-            <span className="text-4xl font-bold text-blue-900">500+</span>
-            <span className="text-slate-500 mt-1">Active Jobs</span>
+            <span className="text-4xl font-bold text-blue-900!">500+</span>
+            <span className="text-slate-500! mt-1">Active Jobs</span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-4xl font-bold text-blue-900">200+</span>
-            <span className="text-slate-500 mt-1">Companies</span>
+            <span className="text-4xl font-bold text-blue-900!">200+</span>
+            <span className="text-slate-500! mt-1">Companies</span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-4xl font-bold text-blue-900">50K+</span>
-            <span className="text-slate-500 mt-1">Placements</span>
+            <span className="text-4xl font-bold text-blue-900!">50K+</span>
+            <span className="text-slate-500! mt-1">Placements</span>
           </div>
         </div>
       </div>

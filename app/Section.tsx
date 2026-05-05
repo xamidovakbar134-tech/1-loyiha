@@ -1,4 +1,3 @@
-import React from 'react';
 import { Search, Star, Sparkles, Zap } from 'lucide-react';
 
 const FeaturesSection = () => {
@@ -13,10 +12,8 @@ const FeaturesSection = () => {
         </p>
       </div>
 
-      {/* Kartochkalar qolipi */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         
-        {/* 1-Karta: Powerful Search */}
         <div className="p-8 border border-gray-100 rounded-2xl bg-white shadow-sm hover:shadow-md! transition-shadow!">
           <div className="mb-4">
             <Search className="text-blue-500 w-8 h-8" />
@@ -27,7 +24,6 @@ const FeaturesSection = () => {
           </p>
         </div>
 
-        {/* 2-Karta: Curated Opportunities */}
         <div className="p-8 border border-gray-100 rounded-2xl bg-white shadow-sm hover:shadow-md! transition-shadow!">
           <div className="mb-4">
             <Star className="text-yellow-400 w-8 h-8 fill-yellow-400" />

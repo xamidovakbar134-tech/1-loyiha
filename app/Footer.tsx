@@ -19,7 +19,7 @@ const Footer = () => {
             <li>
               <a
                 href="#"
-                className="hover:text-white! transition-colors! duration-200!"
+                className="hover:text-white!  text-white transition-colors! duration-200! text-decoration-none"
               >
                 Browse Jobs
               </a>
@@ -27,7 +27,7 @@ const Footer = () => {
             <li>
               <a
                 href="#"
-                className="hover:text-white! transition-colors! duration-200!"
+                className="hover:text-white! text-white transition-colors! duration-200! text-decoration-none"
               >
                 Post a Job
               </a>
@@ -35,15 +35,14 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Contact ustuni */}
         <div className="flex flex-col gap-4">
-          <h3 className="text-xl font-bold text-white tracking-tight">
+          <h3 className="text-xl! font-bold! text-white!  tracking-tight! text-decoration-none">
             Contact
           </h3>
-          <p className="text-base text-gray-400">
+          <p className="text-base text-gray-400 ">
             <a
               href="mailto:support@jobportal.com"
-              className="hover:text-white transition-colors duration-200"
+              className="hover:text-white! text-white transition-colors! duration-200! text-decoration-none"
             >
               support@jobportal.com
             </a>

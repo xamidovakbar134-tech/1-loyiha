@@ -1,18 +1,19 @@
-import Banner from "./_components/Banner";
-import Footer from "./_components/Footer";
-import Header from "./_components/Header";
-import Hero from "./_components/Hero";
-import PreFooter from "./_components/PreFooter";
-import Section from "./_components/Section";
+import Header from "./Header";
+import Hero from "./Hero";
+import PreFooter from "./PreFooter";
+import Banner from "./Banner";
+import Footer from "./Footer";
+import Section from "./Section";
+
 export default function Home() {
   return (
     <div>
       <Header />
-      <Hero/>
-      <Section/>
-      <PreFooter/>
-      <Banner/>
-      <Footer/>
+      <Hero />
+      <Section />
+      <PreFooter />
+      <Banner />
+      <Footer />
     </div>
   );
 }

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const CareerBanner = () => {
   return (
     <section className="relative! w-full py-20 px-6 flex flex-col items-center justify-center text-center bg-[#1e3a8a]! text-white overflow-hidden!">
@@ -14,10 +16,11 @@ const CareerBanner = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button className="px-3 py-2 rounded-2 bg-blue-50 text-blue-900 font-semibold rounded-md hover:bg-black! hover:text-white transition-colors! duration-200! shadow-lg!">
-            Explore Jobs
-          </button>
-
+          <Link href={"/jobs"}>
+            <button className="px-3 py-2 rounded-2 bg-blue-50 text-blue-900 font-semibold rounded-md hover:bg-black! hover:text-white transition-colors! duration-200! shadow-lg!">
+              Explore Jobs
+            </button>
+          </Link>
           <button className="px-3 py-2 rounded-2 bg-transparent! border border-blue-300/50! text-white font-semibold! rounded-md! hover:bg-white/10! transition-all! duration-200!">
             Post a Job
           </button>
