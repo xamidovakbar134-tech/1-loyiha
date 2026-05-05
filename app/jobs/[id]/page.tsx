@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { ArrowLeft, Loader2 } from "lucide-react";
@@ -32,13 +32,22 @@ export default function JobDetailsPage() {
       .catch(() => setLoading(false));
   }, [id]);
 
-  if (loading) return <div className="flex justify-center p-20"><Loader2 className="animate-spin" /></div>;
-  if (!job) return <div className="p-20 text-center text-red-500 font-bold">Job not found!</div>;
+  if (loading)
+    return (
+      <div className="flex justify-center p-20">
+        <Loader2 className="animate-spin" />
+      </div>
+    );
+  if (!job)
+    return (
+      <div className="p-20 text-center text-red-500 font-bold">
+        Job not found!
+      </div>
+    );
 
   return (
     <div className="bg-[#fcfcfc]! min-h-screen p-10 font-sans!">
       <div className="max-w-6xl mx-auto">
-        
         <Link
           href="/jobs"
           className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-black mb-8 border border-gray-200 px-4 py-2 rounded-lg bg-white shadow-sm transition"
@@ -49,9 +58,13 @@ export default function JobDetailsPage() {
         <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-10 mb-8">
           <div className="flex justify-between items-start">
             <div>
-              <h1 className="text-4xl font-bold text-gray-900 mb-3">{job.title}</h1>
-              <p className="text-[#0a2e6e] text-xl font-semibold mb-6">{job.company}</p>
-              
+              <h1 className="text-4xl font-bold text-gray-900 mb-3">
+                {job.title}
+              </h1>
+              <p className="text-[#0a2e6e] text-xl font-semibold mb-6">
+                {job.company}
+              </p>
+
               <div className="flex gap-3">
                 <span className="px-3 py-1.5 bg-[#eef2ff] text-[#3730a3] rounded-md text-xs font-bold">
                   {job.category}
@@ -74,20 +87,26 @@ export default function JobDetailsPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr,350px] gap-8">
-          
           <div className="space-y-8">
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-10">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Job Description</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                Job Description
+              </h2>
               <p className="text-gray-600 leading-relaxed text-lg">
                 {job.description}
               </p>
             </div>
 
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-10">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Requirements</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                Requirements
+              </h2>
               <ul className="space-y-4">
                 {job.skills?.map((skill, index) => (
-                  <li key={index} className="flex items-center text-gray-600 text-lg">
+                  <li
+                    key={index}
+                    className="flex items-center text-gray-600 text-lg"
+                  >
                     <span className="size-1.5 bg-blue-900 rounded-full mr-3 shrink-0"></span>
                     {skill}
                   </li>
@@ -98,8 +117,10 @@ export default function JobDetailsPage() {
 
           <aside>
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 sticky top-10">
-              <h2 className="text-xl font-bold text-gray-900 mb-8">Job Details</h2>
-              
+              <h2 className="text-xl font-bold text-gray-900 mb-8">
+                Job Details
+              </h2>
+
               <div className="space-y-8">
                 <div>
                   <p className="text-gray-400 text-sm mb-1.5">Location</p>
@@ -124,7 +145,6 @@ export default function JobDetailsPage() {
               </div>
             </div>
           </aside>
-
         </div>
       </div>
     </div>
