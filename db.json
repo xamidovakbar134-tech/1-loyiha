@@ -1,0 +1,42 @@
+{
+  "applications": [
+    {
+      "id": "1",
+      "name": "nozim",
+      "email": "kozim@gmail.com",
+      "job": "Senior Frontend Engineer - TechCorp",
+      "date": "Apr 30, 2026, 08:51 AM"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "2",
+      "title": "wsd",
+      "company": "sd",
+      "location": "df",
+      "salary": "dfcv",
+      "category": "Marketing",
+      "type": "Contract",
+      "description": "csdx",
+      "requirements": "sdxc",
+      "skills": [
+        "sdxc"
+      ]
+    },
+    {
+      "title": "dcfv",
+      "company": "sdcf",
+      "location": "wedfc",
+      "salary": "wedf",
+      "category": "Marketing",
+      "type": "Remote",
+      "description": "wedf",
+      "requirements": "wsedfghjkl",
+      "skills": [
+        "wsedfghjkl"
+      ],
+      "id": "YKJAP2LbngY"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

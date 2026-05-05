@@ -33,14 +33,17 @@ const Hero = () => {
         </div>
 
         <div className="flex flex-wrap justify-center gap-4 mb-16">
-          <button className="bg-[#0f3460]! rounded-2 py-2 px-3 text-white rounded-md font-semibold hover:bg-[#1a4a80]! transition-all">
-            Browse All Jobs
-          </button>
-          <button className="bg-white text-slate-900! py-2 px-3 rounded-2 border border-slate-200! rounded-md font-semibold hover:bg-slate-50! transition-all!">
-            Post a Job
-          </button>
+          <Link href={"/jobs"}>
+            <button className="bg-[#0f3460]! rounded-2 py-2 px-3 text-white rounded-md font-semibold hover:bg-[#1a4a80]! transition-all">
+              Browse All Jobs
+            </button>
+          </Link>
+          <Link href={"/admin/createJob"}>
+            <button className="bg-white text-slate-900! py-2 px-3 rounded-2 border border-slate-200! rounded-md font-semibold hover:bg-slate-50! transition-all!">
+              Post a Job
+            </button>
+          </Link>
         </div>
-
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-8">
           <div className="flex flex-col items-center">
             <span className="text-4xl font-bold text-blue-900!">500+</span>
