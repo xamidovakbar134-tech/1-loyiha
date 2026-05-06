@@ -42,7 +42,8 @@ const JobsManagement = () => {
         });
         setJobs(jobs.filter((job) => job.id !== id));
       } catch (error) {
-        alert("O'chirishda xatolik yuz berdi");
+        console.log(error);
+        
       }
     }
   };
