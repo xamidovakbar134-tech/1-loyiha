@@ -2,9 +2,9 @@ import Link from "next/link"
 const Header = () => {
   return (
     <div className="fixed-top bg-white w-100 border-bottom">
-      <div className="container mx-auto p-3">
-        <div className="flex items-center justify-center gap-220  border-gray-300 ">
-          <h1 className="font-bold">Job Portal</h1>
+      <div className=" mx-auto p-3">
+        <div className="d-flex px-20 gap-220  border-gray-300 ">
+          <h1 className="font-bold!">Job Portal</h1>
           <div className="flex justify-center items-center gap-4">
             <Link href="/" className="text-decoration-none text-gray-700 hover:text-blue-500 transition-colors">
               Home

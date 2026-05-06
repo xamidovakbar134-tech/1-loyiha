@@ -48,7 +48,8 @@ const ApplicationsPage = () => {
         });
         setApplications(applications.filter((app) => app.id !== id));
       } catch (error) {
-        alert("Xatolik!");
+        console.log(error);
+        
       }
     }
   };
@@ -96,10 +97,10 @@ const ApplicationsPage = () => {
                 key={app.id}
                 className="border-b border-gray-50 hover:bg-gray-50/80 transition-colors"
               >
-                <td className="py-4 px-6 text-sm text-gray-800 font-medium">
+                <td className="py-4 px-6 text-sm! text-gray-800! font-medium!">
                   {app.name}
                 </td>
-                <td className="py-4 px-6 text-sm text-gray-600">{app.email}</td>
+                <td className="py-4 px-6 text-sm! text-gray-600!">{app.email}</td>
                 <td className="py-4 px-6 text-sm text-gray-600">{app.job}</td>
                 <td className="py-4 px-6 text-sm text-gray-800">{app.date}</td>
                 <td className="py-4 px-6 text-sm text-right">
@@ -112,7 +113,7 @@ const ApplicationsPage = () => {
                     </button>
                     <button
                       onClick={() => handleDelete(app.id)}
-                      className="text-red-600 hover:text-red-700 font-medium"
+                      className="text-red-600 hover:text-red-700 font-medium!"
                     >
                       Delete
                     </button>

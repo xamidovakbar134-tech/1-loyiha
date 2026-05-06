@@ -3,6 +3,7 @@
 
 import { useEffect, useState } from "react";
 import { Loader2, Plus, Trash2 } from "lucide-react";
+import Link from "next/link";
 
 interface Job {
   id: number;
@@ -56,21 +57,23 @@ const JobsManagement = () => {
   }
 
   return (
-    <div className="p-10 bg-[#fbfcfd] min-h-screen">
+    <div className=" min-h-screen">
       <div className="mb-8 flex justify-between items-end">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900">Jobs Management</h1>
-          <p className="text-gray-500 mt-1">Manage all your job postings</p>
+          <h1 className="text-3xl! font-bold! text-gray-900!">Jobs Management</h1>
+          <p className="text-gray-500! mt-1">Manage all your job postings</p>
         </div>
-        <button className="flex items-center gap-2 px-6 py-2.5 bg-[#1e3a8a] text-white font-semibold rounded-lg hover:bg-blue-900 transition shadow-md">
-          <Plus size={18} />
-          Create New Job
-        </button>
+        <Link href={"/admin/createJob"} className="text-decoration-none">
+          <button className="flex items-center gap-2 px-6 py-2.5 bg-[#1e3a8a] text-white font-semibold! rounded-lg! hover:bg-blue-900! transition! shadow-md!">
+            <Plus size={18} />
+            Create New Job
+          </button>
+        </Link>
       </div>
 
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
         <div className="p-6 border-b border-gray-100">
-          <h2 className="text-xl font-bold text-gray-800">
+          <h2 className="text-xl! font-bold! text-gray-800!">
             All Jobs ({jobs.length})
           </h2>
         </div>
@@ -79,52 +82,52 @@ const JobsManagement = () => {
           <table className="w-full text-left border-collapse">
             <thead className="bg-[#fdfafb]">
               <tr>
-                <th className="px-6 py-4 text-sm font-semibold text-gray-700">
+                <th className="px-6 py-4 text-sm! font-semibold! text-gray-700!">
                   Title
                 </th>
-                <th className="px-6 py-4 text-sm font-semibold text-gray-700">
+                <th className="px-6 py-4 text-sm! font-semibold! text-gray-700!">
                   Company
                 </th>
-                <th className="px-6 py-4 text-sm font-semibold text-gray-700">
+                <th className="px-6 py-4 text-sm! font-semibold! text-gray-700!">
                   Category
                 </th>
-                <th className="px-6 py-4 text-sm font-semibold text-gray-700">
+                <th className="px-6 py-4 text-sm font-semibold! text-gray-700!">
                   Type
                 </th>
-                <th className="px-6 py-4 text-sm font-semibold text-gray-700 text-right">
+                <th className="px-6 py-4 text-sm! font-semibold! text-gray-700! ">
                   Actions
                 </th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-100">
+            <tbody className="divide-y! divide-gray-100!">
               {jobs.length > 0 ? (
                 jobs.map((job) => (
-                  <tr key={job.id} className="hover:bg-gray-50 transition">
+                  <tr key={job.id} className="hover:bg-gray-50! transition!">
                     <td className="px-6 py-5">
-                      <p className="font-bold text-gray-900 leading-none">
+                      <p className="font-bold text-gray-900! leading-none!">
                         {job.title}
                       </p>
-                      <p className="text-xs text-gray-400 mt-1">
+                      <p className="text-xs text-gray-400! mt-1">
                         {job.location}
                       </p>
                     </td>
-                    <td className="px-6 py-5 text-gray-600 font-medium">
+                    <td className="px-6 py-5 text-gray-600! font-medium!">
                       {job.company}
                     </td>
                     <td className="px-6 py-5">
-                      <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full border border-blue-100">
+                      <span className="px-3 py-1 bg-blue-50! text-blue-700! text-xs! font-semibold! rounded-full! border border-blue-100!">
                         {job.category}
                       </span>
                     </td>
                     <td className="px-6 py-5">
-                      <span className="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-semibold rounded-full border border-gray-200">
+                      <span className="px-3 py-1 bg-gray-100! text-gray-600! text-xs! font-semibold! rounded-full! border border-gray-200!">
                         {job.type}
                       </span>
                     </td>
-                    <td className="px-6 py-5 text-right">
+                    <td className="px-6 py-5 ">
                       <button
                         onClick={() => handleDelete(job.id)}
-                        className="px-4 py-1.5 border border-gray-300 text-red-600 text-sm font-semibold rounded-md hover:bg-red-50 hover:border-red-200 transition inline-flex items-center gap-2"
+                        className="px-4 py-1.5 border border-gray-300! text-red-600! text-sm! font-semibold! rounded-md! hover:bg-red-50! hover:border-red-200! transition! inline-flex! items-center! gap-2"
                       >
                         <Trash2 size={14} />
                         Delete
@@ -134,7 +137,7 @@ const JobsManagement = () => {
                 ))
               ) : (
                 <tr>
-                  <td colSpan={5} className="p-20 text-center text-gray-400">
+                  <td colSpan={5} className="p-20 text-center! text-gray-400!">
                     Hech qanday vakansiya topilmadi.
                   </td>
                 </tr>

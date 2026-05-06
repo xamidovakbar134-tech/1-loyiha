@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { MapPin, DollarSign, Loader2, ChevronDown } from "lucide-react";
 import Link from "next/link";
+import Header from "../Header";
 
 interface Job {
   id: number;
@@ -48,9 +49,11 @@ const JobsPage = () => {
         <Loader2 className="animate-spin" />
       </div>
     );
+    
 
   return (
-    <div className="bg-[#f9fafb] min-h-screen font-sans p-12">
+    <div className="bg-[#f9fafb] min-h-screen font-sans p-12 mt-28">
+      <Header/>
       <div className="max-w-7xl mx-auto">
         <header className="mb-12">
           <h1 className="text-4xl font-bold text-gray-950 mb-3">
