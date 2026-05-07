@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { ArrowLeft, Loader2 } from "lucide-react";
+import { ArrowLeft, Loader2, X } from "lucide-react";
 
 interface Job {
   id: number;
@@ -22,6 +22,10 @@ export default function JobDetailsPage() {
   const [job, setJob] = useState<Job | null>(null);
   const [loading, setLoading] = useState(true);
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [formData, setFormData] = useState({ name: "", email: "" });
+  const [submitting, setSubmitting] = useState(false);
+
   useEffect(() => {
     fetch(`http://localhost:4000/jobs/${id}`)
       .then((res) => res.json())
@@ -32,12 +36,51 @@ export default function JobDetailsPage() {
       .catch(() => setLoading(false));
   }, [id]);
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!job) return;
+
+    setSubmitting(true);
+
+    const applicationData = {
+      name: formData.name,
+      email: formData.email,
+      job: `${job.title} - ${job.company}`,
+      date: new Date().toLocaleString("en-US", {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      }),
+    };
+
+    try {
+      const res = await fetch("http://localhost:4000/applications", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(applicationData),
+      });
+
+      if (res.ok) {
+        alert("Application submitted successfully!");
+        setIsModalOpen(false);
+        setFormData({ name: "", email: "" });
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   if (loading)
     return (
       <div className="flex justify-center p-20">
         <Loader2 className="animate-spin" />
       </div>
     );
+
   if (!job)
     return (
       <div className="p-20 text-center text-red-500 font-bold">
@@ -80,11 +123,77 @@ export default function JobDetailsPage() {
           </div>
 
           <div className="mt-10 border-t border-gray-100 pt-8">
-            <button className="bg-[#0a2e6e] hover:bg-[#07245a] text-white px-16 py-2 rounded-xl! font-bold! text-lg! transition! shadow-lg1">
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="bg-[#0a2e6e] hover:bg-[#07245a] text-white px-16 py-2 rounded-2 font-bold! text-lg! transition! shadow-lg1"
+            >
               Apply Now
             </button>
           </div>
         </div>
+
+        {isModalOpen && (
+          <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+            <div className="bg-white rounded-xl p-8 max-w-md w-full relative shadow-2xl">
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="absolute right-4 top-4 text-gray-400 hover:text-black"
+              >
+                <X size={20} />
+              </button>
+
+              <h2 className="text-2xl font-bold mb-1">Apply for Position</h2>
+              <p className="text-sm text-gray-500 mb-6">
+                Apply to:{" "}
+                <span className="font-semibold text-black">{job.title}</span>
+              </p>
+
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <label className="block text-sm font-bold mb-1">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="John Doe"
+                    className="w-full border border-gray-300 rounded-lg p-2.5 outline-none focus:border-[#0a2e6e]"
+                    value={formData.name}
+                    onChange={(e) =>
+                      setFormData({ ...formData, name: e.target.value })
+                    }
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-bold mb-1">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    required
+                    placeholder="john@example.com"
+                    className="w-full border border-gray-300 rounded-lg p-2.5 outline-none focus:border-[#0a2e6e]"
+                    value={formData.email}
+                    onChange={(e) =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
+                  />
+                </div>
+                <button
+                  disabled={submitting}
+                  type="submit"
+                  className="w-full bg-[#0a2e6e] text-white py-3 rounded-lg font-bold hover:bg-[#07245a] transition flex justify-center items-center"
+                >
+                  {submitting ? (
+                    <Loader2 className="animate-spin mr-2" />
+                  ) : (
+                    "Submit Application"
+                  )}
+                </button>
+              </form>
+            </div>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr,350px] gap-8">
           <div className="space-y-8">

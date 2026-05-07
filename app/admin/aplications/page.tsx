@@ -102,8 +102,8 @@ const ApplicationsPage = () => {
                 </td>
                 <td className="py-4 px-6 text-sm! text-gray-600!">{app.email}</td>
                 <td className="py-4 px-6 text-sm text-gray-600">{app.job}</td>
-                <td className="py-4 px-6 text-sm text-gray-800">{app.date}</td>
-                <td className="py-4 px-6 text-sm text-right">
+                <td className="py-4 px-6 text-sm! text-gray-800!">{app.date}</td>
+                <td className="py-4 px-6 text-sm! text-right">
                   <div className="flex justify-end gap-4">
                     <button
                       onClick={() => handleView(app)}
