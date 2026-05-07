@@ -25,7 +25,7 @@ const JobsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
 
   useEffect(() => {
-    fetch("http://localhost:4000/jobs")
+    fetch("https://1-loyiha-eight.vercel.app/jobs")
       .then((res) => res.json())
       .then((data) => {
         setJobs(data);

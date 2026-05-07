@@ -20,7 +20,7 @@ const JobsManagement = () => {
 
   const fetchJobs = async () => {
     try {
-      const response = await fetch("http://localhost:4000/jobs");
+      const response = await fetch("https://1-loyiha-eight.vercel.app/jobs");
       const data = await response.json();
       setJobs(data);
     } catch (error) {
@@ -37,7 +37,7 @@ const JobsManagement = () => {
   const handleDelete = async (id: number) => {
     if (confirm("Ushbu vakansiyani o'chirmoqchimisiz?")) {
       try {
-        await fetch(`http://localhost:4000/jobs/${id}`, {
+        await fetch(`https://1-loyiha-eight.vercel.app/jobs/${id}`, {
           method: "DELETE",
         });
         setJobs(jobs.filter((job) => job.id !== id));

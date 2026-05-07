@@ -21,7 +21,7 @@ const ApplicationsPage = () => {
 
   const fetchApplications = async () => {
     try {
-      const response = await fetch("http://localhost:4000/applications");
+      const response = await fetch("https://1-loyiha-eight.vercel.app/applications");
       const data = await response.json();
       setApplications(data);
     } catch (error) {
@@ -43,7 +43,7 @@ const ApplicationsPage = () => {
   const handleDelete = async (id: string | number) => {
     if (confirm("O'chirilsinmi?")) {
       try {
-        await fetch(`http://localhost:4000/applications/${id}`, {
+        await fetch(`https://1-loyiha-eight.vercel.app/applications/${id}`, {
           method: "DELETE",
         });
         setApplications(applications.filter((app) => app.id !== id));
@@ -74,19 +74,19 @@ const ApplicationsPage = () => {
         <table className="w-full text-left border-collapse">
           <thead className="bg-gray-50/50">
             <tr>
-              <th className="py-4 px-6 font-semibold text-sm text-gray-700">
+              <th className="py-4 px-6 font-semibold! text-sm! text-gray-700">
                 Name
               </th>
-              <th className="py-4 px-6 font-semibold text-sm text-gray-700">
+              <th className="py-4 px-6 font-semibold! text-sm! text-gray-700">
                 Email
               </th>
-              <th className="py-4 px-6 font-semibold text-sm text-gray-700">
+              <th className="py-4 px-6 font-semibold! text-sm! text-gray-700">
                 Job
               </th>
-              <th className="py-4 px-6 font-semibold text-sm text-gray-700">
+              <th className="py-4 px-6 font-semibold! text-sm! text-gray-700">
                 Applied date
               </th>
-              <th className="py-4 px-6 font-semibold text-sm text-gray-700 text-right">
+              <th className="py-4 px-6 font-semibold! text-sm text-gray-700 text-right">
                 Actions
               </th>
             </tr>

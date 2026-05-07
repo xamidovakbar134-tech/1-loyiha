@@ -53,7 +53,7 @@ export default function CreateJobPage() {
           .filter((item) => item !== ""),
       };
 
-      const response = await fetch("http://localhost:4000/jobs", {
+      const response = await fetch("https://1-loyiha-eight.vercel.app/jobs", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formattedData),
