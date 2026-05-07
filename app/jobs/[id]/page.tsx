@@ -55,32 +55,32 @@ export default function JobDetailsPage() {
           <ArrowLeft size={16} className="mr-2" /> Back to Jobs
         </Link>
 
-        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-10 mb-8">
-          <div className="flex justify-between items-start">
+        <div className="bg-white rounded-2xl! border border-gray-100! shadow-sm! p-10 mb-8">
+          <div className="flex justify-between items-start!">
             <div>
-              <h1 className="text-4xl font-bold text-gray-900 mb-3">
+              <h1 className="text-4xl! font-bold! text-gray-900! mb-3">
                 {job.title}
               </h1>
-              <p className="text-[#0a2e6e] text-xl font-semibold mb-6">
+              <p className="text-[#0a2e6e] text-xl! font-semibold! mb-6">
                 {job.company}
               </p>
 
               <div className="flex gap-3">
-                <span className="px-3 py-1.5 bg-[#eef2ff] text-[#3730a3] rounded-md text-xs font-bold">
+                <span className="px-3 py-1.5 bg-[#eef2ff] text-[#3730a3] rounded-md! text-xs! font-bold!">
                   {job.category}
                 </span>
-                <span className="px-3 py-1.5 bg-[#f0f9ff] text-[#0369a1] rounded-md text-xs font-bold">
+                <span className="px-3 py-1.5 bg-[#f0f9ff] text-[#0369a1] rounded-md! text-xs! font-bold!">
                   {job.location}
                 </span>
               </div>
             </div>
-            <div className="text-[#c2410c] text-3xl font-extrabold">
+            <div className="text-[#c2410c] text-3xl! font-extrabold!">
               {job.salary}
             </div>
           </div>
 
           <div className="mt-10 border-t border-gray-100 pt-8">
-            <button className="bg-[#0a2e6e] hover:bg-[#07245a] text-white px-16 py-3 rounded-xl font-bold text-lg transition shadow-lg">
+            <button className="bg-[#0a2e6e] hover:bg-[#07245a] text-white px-16 py-2 rounded-xl! font-bold! text-lg! transition! shadow-lg1">
               Apply Now
             </button>
           </div>
@@ -88,26 +88,26 @@ export default function JobDetailsPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr,350px] gap-8">
           <div className="space-y-8">
-            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-10">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <div className="bg-white rounded-2xl! border border-gray-100 shadow-sm! p-10">
+              <h2 className="text-2xl! font-bold! text-gray-900! mb-6">
                 Job Description
               </h2>
-              <p className="text-gray-600 leading-relaxed text-lg">
+              <p className="text-gray-600! leading-relaxed! text-lg!">
                 {job.description}
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-10">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <div className="bg-white rounded-2xl! border border-gray-100! shadow-sm! p-10">
+              <h2 className="text-2xl! font-bold! text-gray-900! mb-6">
                 Requirements
               </h2>
               <ul className="space-y-4">
                 {job.skills?.map((skill, index) => (
                   <li
                     key={index}
-                    className="flex items-center text-gray-600 text-lg"
+                    className="flex items-center text-gray-600! text-lg!"
                   >
-                    <span className="size-1.5 bg-blue-900 rounded-full mr-3 shrink-0"></span>
+                    <span className="size-1.5! bg-blue-900 rounded-full! mr-3 shrink-0!"></span>
                     {skill}
                   </li>
                 ))}
@@ -117,14 +117,14 @@ export default function JobDetailsPage() {
 
           <aside>
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 sticky top-10">
-              <h2 className="text-xl font-bold text-gray-900 mb-8">
+              <h2 className="text-xl! font-bold! text-gray-900! mb-8">
                 Job Details
               </h2>
 
               <div className="space-y-8">
                 <div>
-                  <p className="text-gray-400 text-sm mb-1.5">Location</p>
-                  <p className="font-bold text-gray-900">{job.location}</p>
+                  <p className="text-gray-400! text-sm! mb-1.5">Location</p>
+                  <p className="font-bold! text-gray-900!">{job.location}</p>
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm mb-1.5">Job Type</p>

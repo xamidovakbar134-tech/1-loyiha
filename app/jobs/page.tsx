@@ -49,25 +49,24 @@ const JobsPage = () => {
         <Loader2 className="animate-spin" />
       </div>
     );
-    
 
   return (
     <div className="bg-[#f9fafb] min-h-screen font-sans p-12 mt-28">
-      <Header/>
-      <div className="max-w-7xl mx-auto">
+      <Header />
+      <div className="max-w-7xl! mx-auto">
         <header className="mb-12">
-          <h1 className="text-4xl font-bold text-gray-950 mb-3">
+          <h1 className="text-4xl! font-bold! text-gray-950! mb-3">
             Find Your Next Opportunity
           </h1>
-          <p className="text-gray-500 text-lg">
+          <p className="text-gray-500! text-lg!">
             Explore our curated list of job openings and find the perfect match
             for your career.
           </p>
         </header>
 
         <div className="flex gap-10">
-          <aside className="w-[320px] shrink-0 bg-white p-8 rounded-2xl border border-gray-100 shadow-sm h-fit">
-            <h2 className="text-xl font-bold mb-8">Filter Jobs</h2>
+          <aside className="w-[320px] shrink-0! bg-white p-8 rounded-2xl! border border-gray-100! shadow-sm! h-fit!">
+            <h2 className="text-xl! font-bold! mb-8">Filter Jobs</h2>
 
             <div className="space-y-8">
               <div>
@@ -79,19 +78,19 @@ const JobsPage = () => {
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   placeholder="Job title, company, or skills..."
-                  className="w-full px-4 py-3 bg-[#fcfcfc] border border-gray-100 rounded-xl text-sm outline-none focus:border-blue-200 transition"
+                  className="w-full px-4 py-2 bg-[#fcfcfc] border border-gray-100! rounded-3 text-sm! outline-none! focus:border-blue-200! transition!"
                 />
               </div>
 
               <div>
-                <label className="text-sm font-medium text-gray-500 mb-3 block">
+                <label className="text-sm! font-medium! text-gray-500! mb-3 block!">
                   Category
                 </label>
                 <div className="relative">
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full px-4 py-3 bg-[#fcfcfc] border border-gray-100 rounded-xl text-sm appearance-none outline-none"
+                    className="w-full px-4 py-2 bg-[#fcfcfc] border border-gray-100 rounded-3 text-sm! appearance-none! outline-none!"
                   >
                     <option>All Categories</option>
                     <option>Technology</option>
@@ -99,7 +98,7 @@ const JobsPage = () => {
                     <option>Marketing</option>
                     <option>Sales</option>
                   </select>
-                  <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 size-4 text-gray-400" />
+                  <ChevronDown className="absolute! right-4! top-1/2 -translate-y-1/2 size-4 text-gray-400" />
                 </div>
               </div>
 
@@ -108,12 +107,12 @@ const JobsPage = () => {
                   setSearchTerm("");
                   setSelectedCategory("All Categories");
                 }}
-                className="w-full py-3 bg-[#f8f9fa] hover:bg-gray-100 text-gray-900 font-semibold rounded-xl border border-gray-100 transition"
+                className="w-full py-2 bg-[#f8f9fa] hover:bg-gray-100! text-gray-900! font-semibold! rounded-xl! border border-gray-100! transition!"
               >
                 Reset Filters
               </button>
 
-              <p className="text-xs text-gray-400 pt-4">
+              <p className="text-xs text-gray-400! pt-4">
                 Category: {selectedCategory}
               </p>
             </div>
@@ -121,8 +120,8 @@ const JobsPage = () => {
 
           <main className="flex-1">
             <div className="flex items-center justify-between mb-8">
-              <h2 className="text-2xl font-bold">Available Jobs</h2>
-              <span className="text-gray-400 text-sm">
+              <h2 className="text-2xl! font-bold!">Available Jobs</h2>
+              <span className="text-gray-400 text-sm!">
                 {filteredJobs.length} positions
               </span>
             </div>
@@ -192,7 +191,7 @@ const JobsPage = () => {
                     </div>
                   </div>
                   <Link href={`/jobs/${job.id}`} className="w-full ...">
-                    <button className="w-full py-3 bg-[#0a2e6e] hover:bg-[#07245a] text-white rounded-xl font-bold transition">
+                    <button className="w-full py-2 bg-[#0a2e6e] hover:bg-[#07245a] text-white rounded-3 font-bold! transition">
                       View Details
                     </button>
                   </Link>

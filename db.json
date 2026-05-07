@@ -10,20 +10,6 @@
   ],
   "jobs": [
     {
-      "title": "dcfv",
-      "company": "sdcf",
-      "location": "wedfc",
-      "salary": "wedf",
-      "category": "Marketing",
-      "type": "Remote",
-      "description": "wedf",
-      "requirements": "wsedfghjkl",
-      "skills": [
-        "wsedfghjkl"
-      ],
-      "id": "YKJAP2LbngY"
-    },
-    {
       "title": "dsdx",
       "company": "sdxc",
       "location": "sdc",
@@ -36,6 +22,20 @@
         "sxd"
       ],
       "id": "NFp1T8BEtKA"
+    },
+    {
+      "title": "wsd",
+      "company": "wsed",
+      "location": "wsed",
+      "salary": "100",
+      "category": "Design",
+      "type": "Part-time",
+      "description": "wsed",
+      "requirements": "sdx",
+      "skills": [
+        "sdx"
+      ],
+      "id": "YDQ7g0ouv7Y"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

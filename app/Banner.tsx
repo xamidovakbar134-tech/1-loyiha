@@ -22,9 +22,9 @@ const CareerBanner = () => {
             </button>
           </Link>
           <Link href={"/admin/createJob"}>
-          <button className="px-3 py-2 rounded-2 bg-transparent! border border-blue-300/50! text-white font-semibold! rounded-md! hover:bg-white/10! transition-all! duration-200!">
-            Post a Job
-          </button>
+            <button className="px-3 py-2 rounded-2 bg-transparent! border border-blue-300/50! text-white font-semibold! rounded-md! hover:bg-white/10! transition-all! duration-200!">
+              Post a Job
+            </button>
           </Link>
         </div>
       </div>

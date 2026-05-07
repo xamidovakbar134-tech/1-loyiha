@@ -43,7 +43,6 @@ const JobsManagement = () => {
         setJobs(jobs.filter((job) => job.id !== id));
       } catch (error) {
         console.log(error);
-        
       }
     }
   };
@@ -61,7 +60,9 @@ const JobsManagement = () => {
     <div className=" min-h-screen">
       <div className="mb-8 flex justify-between items-end">
         <div>
-          <h1 className="text-3xl! font-bold! text-gray-900!">Jobs Management</h1>
+          <h1 className="text-3xl! font-bold! text-gray-900!">
+            Jobs Management
+          </h1>
           <p className="text-gray-500! mt-1">Manage all your job postings</p>
         </div>
         <Link href={"/admin/createJob"} className="text-decoration-none">

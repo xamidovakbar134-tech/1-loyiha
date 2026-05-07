@@ -18,7 +18,7 @@ const Footer = () => {
           <ul className="flex flex-col gap-3">
             <li>
               <a
-                href="#"
+                href="jobs"
                 className="hover:text-white!  text-white transition-colors! duration-200! text-decoration-none"
               >
                 Browse Jobs
@@ -26,7 +26,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="/admin/createJob"
                 className="hover:text-white! text-white transition-colors! duration-200! text-decoration-none"
               >
                 Post a Job

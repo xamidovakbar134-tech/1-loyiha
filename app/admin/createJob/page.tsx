@@ -26,13 +26,11 @@ export default function CreateJobPage() {
     >,
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    setError(false); 
+    setError(false);
   };
 
-  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
 
     if (
       !formData.title ||
@@ -62,7 +60,7 @@ export default function CreateJobPage() {
       });
 
       if (response.ok) {
-        router.push("/jobs"); 
+        router.push("/jobs");
       }
     } catch (err) {
       console.error("Saqlashda xatolik:", err);
@@ -90,9 +88,10 @@ export default function CreateJobPage() {
       </div>
 
       <div className="bg-white rounded-2xl! shadow-sm! border border-gray-100! p-10">
-        <h2 className="text-2xl! font-bold! text-gray-900! mb-8">Add New Job</h2>
+        <h2 className="text-2xl! font-bold! text-gray-900! mb-8">
+          Add New Job
+        </h2>
 
-        
         {error && (
           <div className="mb-6 p-3 bg-red-50! border border-red-100! text-red-600! rounded-lg! text-sm!">
             Please fill in all required fields
